@@ -1,0 +1,29 @@
+[
+    {
+        "name" : "Disneyland Hotel",
+        "image" : "images/hotel1.jpg",
+        "ranking" : 5,
+        "access" : [{"icon" : "images/walk.svg", "value" : "A 15 min Walk"}],
+        "rating" : {"value" : 2, "reviews": 2058},
+        "description" : "A majestic Disney Hotel at the gateway to Disneyland Park, the Disneyland Hotel is currently being renovated to make it more magical than ever. Our Imagineers will be working their magic to make it even more unique and enhance its impeccable 5-star service and unrivalled Disney hospitality.",
+        "services" : [{"icon" : "images/pool.svg", "value" : "Swiming pool"}]
+    },
+    {
+        "name" : "Disneyland Hotel",
+        "image" : "images/hotel2.jpg",
+        "ranking" : 4,
+        "access" : [{"icon" : "images/walk.svg", "value" : "A 15 min Walk"}],
+        "rating" : {"value" : 2, "reviews": 2058},
+        "description" : "A majestic Disney Hotel at the gateway to Disneyland Park, the Disneyland Hotel is currently being renovated to make it more magical than ever. Our Imagineers will be working their magic to make it even more unique and enhance its impeccable 5-star service and unrivalled Disney hospitality.",
+        "services" : [{"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"},{"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"}]
+    },
+    {
+        "name" : "Disneyland Hotel",
+        "image" : "images/hotel3.jpg",
+        "ranking" : 2,
+        "access" : [{"icon" : "images/walk.svg", "value" : "A 15 min Walk"}],
+        "rating" : {"value" : 2, "reviews": 2058},
+        "description" : "A majestic Disney Hotel at the gateway to Disneyland Park, the Disneyland Hotel is currently being renovated to make it more magical than ever. Our Imagineers will be working their magic to make it even more unique and enhance its impeccable 5-star service and unrivalled Disney hospitality.",
+        "services" : [{"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"}]
+    }
+]
