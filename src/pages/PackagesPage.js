@@ -1,6 +1,7 @@
 import React from 'react';
-import hotelsData from "../hotels.json"
-import Hotel from "./elements/Hotel"
+import hotelsData from "../data/hotels.json"
+import "../assets/styles/packagesPage.css"
+import HotelCard from "../components/HotelCard"
 
 class PackagesPages extends React.Component {
     constructor(props) {
@@ -13,7 +14,7 @@ class PackagesPages extends React.Component {
     renderHotel() {
         return (
             this.state.hotels.map(hotel => (
-                <Hotel hotel={hotel}/>
+                <HotelCard hotel={hotel} key={hotel.id}/>
             ))
         )
     }

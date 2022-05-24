@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "name" : "Disneyland Hotel",
         "image" : "images/hotel1.jpg",
         "ranking" : 5,
@@ -9,6 +10,7 @@
         "services" : [{"icon" : "images/pool.svg", "value" : "Swiming pool"}]
     },
     {
+        "id": 2,
         "name" : "Disneyland Hotel",
         "image" : "images/hotel2.jpg",
         "ranking" : 4,
@@ -18,6 +20,7 @@
         "services" : [{"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"},{"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"}]
     },
     {
+        "id": 3,
         "name" : "Disneyland Hotel",
         "image" : "images/hotel3.jpg",
         "ranking" : 2,

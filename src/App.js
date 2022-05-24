@@ -1,6 +1,6 @@
-import './font.css';
-import './App.css';
-import PackagesPages from './components/PackagesPage';
+import './assets/styles/font.css';
+import './assets/styles/App.css';
+import PackagesPages from './pages/PackagesPage';
 
 function App() {
   return (

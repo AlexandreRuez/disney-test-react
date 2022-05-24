@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'AvenirLTProMedium';
-    src: url('assets/fonts/AvenirLTProMedium.otf');
+    src: url('../fonts/AvenirLTProMedium.otf');
     font-weight: normal;
     font-style: normal;
 }
