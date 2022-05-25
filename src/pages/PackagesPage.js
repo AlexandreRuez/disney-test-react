@@ -1,6 +1,7 @@
 import React from 'react';
 import hotelsData from "../data/hotels.json"
 import "../assets/styles/packagesPage.css"
+import SearchSection from "../components/SearchSection"
 import HotelCard from "../components/HotelCard"
 
 class PackagesPages extends React.Component {
@@ -21,11 +22,14 @@ class PackagesPages extends React.Component {
 
     render() {
         return  (
-        <div className="hotel-list">
-            <h2>
-                DISNEY HOTELS AND LES VILLAGES NATURE PARIS
-            </h2>
-            {this.renderHotel()}
+        <div>
+            <SearchSection/>
+            <div className="hotel-list">
+                <h2>
+                    DISNEY HOTELS AND LES VILLAGES NATURE PARIS
+                </h2>
+                {this.renderHotel()}
+            </div>
         </div>
         );
     }
