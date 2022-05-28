@@ -1,0 +1,14 @@
+[
+    {
+        "id" : 1,
+        "title" : "The Mickey and the Magician show",
+        "description" : "Secure your seat for this enchanting musical show in Walt Disney Studios Park and get ready for spellbinding illusions...",
+        "image": "images/option1.jpg"
+    },
+    {
+        "id" : 2,
+        "title" : "The Lion King: Rhythms of the Pride Lands show",
+        "description" : "Secure your seat for this roaring success of a show, and swing to the rhythm and melodies of the savannah!",
+        "image": "images/option2.jpg"
+    }
+]

@@ -1,0 +1,119 @@
+.options-page {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.options-page h1 {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 900;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(89deg,#9d50ae,#672eaf);
+}
+
+.options-page h2 {
+    width: 100%;
+    font-size: 32px;
+    font-weight: 800;
+    color: rgb(38, 54, 86);
+    margin-bottom: 8px;
+}
+
+.options-page h4{
+    margin: 0px;
+    font-size: 24px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    color: rgb(38, 54, 86);
+}
+
+.subtitle {
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+    color: #263656;
+    margin: 0;
+}
+
+.option-category-header {
+    padding-bottom: 16px;
+}
+
+.option-category-header p {
+    display: block;
+    margin: 0px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(38, 54, 86);
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.options-section {
+    padding: 0px 72px 0px 24px;
+}
+
+
+
+
+/* Option Card */
+
+.option-card {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 292px;
+    border-radius: 10px;
+    box-shadow: rgb(9 17 41 / 5%) 0px 2px 8px 0px;
+    overflow: hidden;
+    height: 100%;
+    padding-bottom: 32px;
+    margin-right: 16px;
+    margin-bottom: 20px;
+}
+
+.option-image-container {
+    width: 100%;
+    height: 164px;
+    overflow: hidden;
+    clip-path: ellipse(115% 65% at 50% 34%);
+    min-width: 276px;
+    max-height: inherit;
+  }
+
+  .option-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .option-card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 24px;
+  }
+
+  .option-card h4 {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.3;
+    text-align: center;
+    color: rgb(37, 48, 80);
+    margin: 16px 0px;
+  }
+
+  .option-card p {
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgb(37, 48, 80);
+    margin: 0px 0px 24px;
+  }
+  

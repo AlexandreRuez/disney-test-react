@@ -4,14 +4,34 @@ import "../assets/styles/packagesPage.css"
 import SearchSection from "../components/SearchSection"
 import HotelCard from "../components/HotelCard"
 
-class PackagesPages extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-                hotels : hotelsData,
+type Access = { icon: string; value: string; }
+
+type Rating = { value: number; reviews: number; }
+
+type Services = { icon: string; value: string; }
+
+type Hotel = { 
+    id: number; 
+    name: string; 
+    image: string; 
+    ranking: number; 
+    access: Access[]; 
+    rating: Rating; 
+    description: string; 
+    services: Services[]; 
+};
+
+type PackagesPagesState = {
+    hotels?: Hotel[];
+};
+
+
+
+class PackagesPages extends React.Component<PackagesPagesState> {
+    state:PackagesPagesState = {
+                hotels: hotelsData,
         }
 
-    }
     renderHotel() {
         return (
             this.state.hotels.map(hotel => (
@@ -22,7 +42,7 @@ class PackagesPages extends React.Component {
 
     render() {
         return  (
-        <div>
+        <div className='packages-page'>
             <SearchSection/>
             <div className="hotel-list">
                 <h2>

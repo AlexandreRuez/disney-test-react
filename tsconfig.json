@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+      "preserveConstEnums": true,
+      "allowSyntheticDefaultImports": true,
+      "jsx": "react",
+    },
+    "files": ["src/custom.d.ts"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
+  }

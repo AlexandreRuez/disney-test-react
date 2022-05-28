@@ -1,6 +1,7 @@
 
 body {
   background-color: #f7f7f7;
+  font: 14px/1.5 AvenirLTProMedium;
 }
 
 #app-layout {
@@ -20,8 +21,15 @@ body {
   padding: 8px 20px;
   border-radius: 40px;
   font-weight: 700;
+  width: fit-content;
   min-width: 120px;
   cursor: pointer;
+}
+
+.main-button.outline {
+  background: #FFF;
+  color: rgb(0, 70, 228);
+  border: 2px solid rgb(0, 70, 228);
 }
 
 .button-arrow {
@@ -32,4 +40,244 @@ body {
 
 .button-arrow svg *{
   fill: #FFF;
+}
+
+/* Dates selected */
+
+.dates-selected-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.dates-selected{
+  display: flex;
+  position: relative;
+  width: 100%;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-bottom: 4px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dates-selected-wrapper .start-date-wrapper {
+  position: relative;
+  filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 0px 3px);
+  width: 50%;
+  z-index: 3;
+}
+
+.dates-selected-wrapper .start-date {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  background: rgb(246, 246, 246);
+  text-align: left;
+  clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+  padding: 12px 10px;
+  background: linear-gradient(88deg, rgb(118, 64, 161), rgb(180, 82, 163)) left bottom / 100% 5px no-repeat rgb(255, 255, 255);
+}
+
+.dates-selected-wrapper .end-date {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 55%;
+  padding: 12px 10px;
+  padding-left: calc(5% + 8px);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  z-index: 1;
+  border: 1px solid rgba(0, 0, 0, 0.01);
+  background: rgb(246, 246, 246);
+  text-align: left;
+  background: linear-gradient(88deg, rgb(118, 64, 161), rgb(180, 82, 163)) left bottom / 100% 6px no-repeat rgb(255, 255, 255);
+}
+
+.dates-selected-wrapper .day {
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+}
+
+.dates-selected-wrapper .date {
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: baseline;
+  align-items: baseline;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: -0.33px;
+}
+
+.dates-selected-wrapper .date span:first-child{
+  font-size: 14px;
+}
+
+.dates-selected-wrapper .date span:not(:last-child) {
+  margin-right: 5px;
+}
+
+
+.edit-icon {
+  color: rgb(138, 155, 174);
+  width: 20px;
+  height: 16px;
+  margin-left: 8px;
+  margin-right: 8px;
+  display: flex;
+  cursor: pointer;
+  transition: transform 0.2s ease 0s;
+}
+
+.edit-icon:hover {
+  transform: scale(1.4);
+}
+
+/* Cart */
+
+.cart {
+  position: sticky;
+  top: 16px;
+  min-width: 25%;
+}
+
+.cart-content {
+  background: rgb(255, 255, 255);
+  transition: height 1s ease 0s;
+  max-width: 290px;
+  border-radius: 12px;
+  box-shadow: rgb(0 0 0 / 5%) 0px 12px 24px 0px;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  height: auto;
+  position: relative;
+}
+
+.cart-icon-wrapper {
+  background: #fff;
+  border-radius: 150px;
+  box-shadow: 0 12px 24px 0 rgb(0 0 0 / 12%);
+  position: absolute;
+  right: 20px;
+  top: -5px;
+  z-index: 100;
+  width: 60px;
+  height: 60px;
+}
+
+.cart-info-wrapper {
+  height: auto;
+  max-height: 519px;
+  margin-top: 66px;
+  padding: 0px 20px;
+}
+
+.guest-wrapper {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: transparent;
+  margin-bottom: 15px;
+  font-size: 10px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgb(38, 54, 86);
+  position: relative;
+  z-index: 5;
+  width: 90%;
+  margin-left: 19px;
+}
+
+.guest-infos {
+  display: flex;
+  align-items: center;
+  width: 33.33%;
+  justify-content: center;
+  margin: 0px -9px;
+}
+
+.guest-infos span {
+  font-size: 14px;
+  color: rgb(37, 48, 80);
+}
+
+.hotel-park-ticket-icon {
+  color: #8a9bae;
+  margin-bottom: 6px;
+  align-items: center;
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+
+.hotel-park-ticket-icon>svg{
+  margin-right: 10px;
+  height: 32px;
+  width: 32px;
+  min-width: 32px;
+}
+
+.hotel-park-ticket-icon h3{
+  color: #8a9bae;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .2px;
+  margin: 2px 0 0 -5px;
+  text-transform: uppercase;
+}
+
+.cart-info-wrapper button {
+  font-family: inherit;
+  z-index: 0;
+  position: relative;
+  cursor: pointer;
+  border-width: 0px;
+  font-weight: 700;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 4px;
+  max-width: calc(100% - 8px);
+  overflow: hidden;
+  box-shadow: none;
+  text-align: center;
+  touch-action: manipulation;
+  outline: none;
+  vertical-align: middle;
+  background: none;
+  border-radius: 24px;
+  font-size: 16px;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 8px;
+  text-decoration: none !important;
+  transition: none 0s ease 0s !important;
+  color: rgb(0, 70, 228) !important;
+}
+
+.cart-info-wrapper button svg{
+  margin: 0;
+}
+
+.cart-hotel-info {
+  background-color: rgb(247, 247, 247);
+  border-radius: 12px;
+  padding: 10px;
+  width: 100%;
 }

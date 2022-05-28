@@ -1,19 +1,31 @@
 import React from 'react';
-import MainButton from "./MainButton"
-import star from "../assets/images/star.svg";
+import MainButton from "./MainButton";
+import StarsRanking from "./StarsRanking";
+import { Link } from "react-router-dom";
 
-class HotelCard extends React.Component {
-    renderRanking(rate) {
-        const stars = [];
-        for (var i = 0; i < rate; i++) {
-            stars.push(<i key={i}><img src={star} alt="star icon"></img></i>);
-        }
-        return (
-            <div className='ranking-container'>
-                {stars}
-            </div>
-        )
-    }
+type Access = { icon: string; value: string; }
+
+type Rating = { value: number; reviews: number; }
+
+type Services = { icon: string; value: string; }
+
+type Hotel = { 
+    id: number; 
+    name: string; 
+    image: string; 
+    ranking: number; 
+    access: Access[]; 
+    rating: Rating; 
+    description: string; 
+    services: Services[]; 
+};
+
+type HotelCardProps = {
+    hotel: Hotel;
+    key: number
+  };
+
+class HotelCard extends React.Component<HotelCardProps> {
     renderAccess(access) {
         return (
             <div className='access-container'>
@@ -45,7 +57,7 @@ class HotelCard extends React.Component {
                     <img src={this.props.hotel.image} alt={this.props.hotel.name}></img>
                 </div>
                 <div className="card-details">
-                    {this.renderRanking(this.props.hotel.ranking)}
+                    <StarsRanking ranking={this.props.hotel.ranking} />
                     <h3>{this.props.hotel.name}</h3>
                     {this.renderAccess(this.props.hotel.access)}
                     <p className="desciption">
@@ -55,7 +67,7 @@ class HotelCard extends React.Component {
                 </div>
             </div>
             <div className='hotel-card-footer'>
-                <MainButton value="Check" arrowActive=""/>
+                <Link to="/options"><MainButton value="Check" arrowActive={false} style=""/></Link>
             </div>
         </div>
     )
