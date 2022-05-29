@@ -4,6 +4,104 @@ body {
   font: 14px/1.5 AvenirLTProMedium;
 }
 
+h1.colored {
+  width: 100%;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(89deg,#9d50ae,#672eaf);
+}
+
+h2 {
+  width: 100%;
+  font-size: 32px;
+  font-weight: 800;
+  color: rgb(38, 54, 86);
+  margin-bottom: 8px;
+}
+
+h3 {
+  color: rgb(38, 54, 86);
+  font-size: 16px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: normal;
+  line-height: 1.13;
+  margin: 0px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.3;
+  text-align: center;
+  color: rgb(37, 48, 80);
+  margin: 16px 0px;
+}
+
+h6 {
+  color: #8a9bae;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+    display: block;
+    margin: 0px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(38, 54, 86);
+}
+
+p.description{
+  font-family: AvenirLTProLight;
+  font-size: 12px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: rgb(38, 54, 86);
+  margin: 5px 0px;
+}
+
+p.disclaimer {
+  font-size: 12px;
+}
+
+.separator {
+  height: 1px;
+    width: 100%;
+    background-color: rgb(230, 230, 230);
+    margin-bottom: 5px;
+}
+
+.price {
+  color: rgb(38, 54, 86);
+  display: inline-flex;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 900;
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.full-width {
+  width: 100% !important;
+}
+
 #app-layout {
   display: flex;
   flex-direction: column;
@@ -40,6 +138,28 @@ body {
 
 .button-arrow svg *{
   fill: #FFF;
+}
+
+/* stars ranking */
+
+.ranking-container i {
+  display: flex;
+}
+
+
+.ranking-container {
+  display: flex;
+  align-items: center;
+  height: 15px;
+}
+
+.ranking-container i {
+  margin-left: 5px;
+}
+
+.ranking-container i,
+.ranking-container img {
+  height: 100%;
 }
 
 /* Dates selected */
@@ -138,7 +258,7 @@ body {
   transition: transform 0.2s ease 0s;
 }
 
-.edit-icon:hover {
+.dates-selected-wrapper .edit-icon:hover {
   transform: scale(1.4);
 }
 
@@ -148,6 +268,13 @@ body {
   position: sticky;
   top: 16px;
   min-width: 25%;
+}
+
+.cart-title {
+  font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: rgb(38, 54, 86);
 }
 
 .cart-content {
@@ -281,3 +408,145 @@ body {
   padding: 10px;
   width: 100%;
 }
+
+.cart-hotel-info .ranking-container {
+  height: 10px;
+  margin-bottom: 5px;
+}
+
+.cart-hotel-details {
+  display: flex;
+  margin: 5px 0px
+}
+
+.cart-hotel-details>.description{
+  font-weight: 900;
+  color: rgb(138, 155, 174);
+  flex: 1 1 0%;
+}
+
+.cart-hotel-details .night-ticket-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.cart-hotel-details .night,
+.cart-hotel-details .ticket  {
+  display: flex;
+  align-items: center;
+}
+
+.cart-hotel-details .ticket>div {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-hotel-details .ticket p {
+  margin: 0;
+  line-height: 12px;
+}
+
+.cart-hotel-details .parks {
+  display: flex;
+    margin: 0px;
+    font-size: 12px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 12px;
+    letter-spacing: normal;
+    color: rgb(37, 59, 86);
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.cart-hotel-details svg{
+  width: 40px;
+  height: 40px;
+}
+
+.cart-hotel-details .night-ticket-wrapper .description {
+  font-weight: 900;
+  color: rgb(37, 59, 86);
+}
+
+.cart-hotel-details .night-ticket-wrapper .description .number {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.cart-hotel-details svg path{
+  fill: rgb(118, 64, 161);
+}
+
+.cart-hotel-amount {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.hotel-amount-title {
+  font-size: 12px;
+  margin: 0px;
+  color: rgb(37, 48, 80);
+  font-weight: 900;
+  line-height: 1.17;
+}
+
+.taxes-infos{
+  font-size: 10px;
+  font-weight: 500;
+  text-align: right;
+  color: rgb(138, 155, 174);
+  margin: 0px;
+}
+
+.colored-disclaimer {
+  font-size: 10px;
+  font-weight: 900;
+  text-align: right;
+  color: rgb(105, 53, 142);
+  margin: 5px 0px 0px;
+}
+
+.cart-total-amount,
+.total-amount-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.cart-total-amount {
+  margin-right: 20px;
+  margin-top: 15px;
+}
+
+.total-amount-wrapper {
+  background: linear-gradient(0deg, rgb(241, 146, 215), rgb(180, 90, 209)) right top / 4px 90% no-repeat transparent;
+  padding-right: 16px;
+}
+
+.total-amount-wrapper .price {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.total-amount-wrapper-title {
+  color: rgb(78, 99, 121);
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+.cart-total-amount .taxes-infos {
+  padding-right: 16px;
+}
+
+.cart-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 30px 10px 10px 10px;
+}
+

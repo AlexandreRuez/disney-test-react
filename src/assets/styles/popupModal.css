@@ -1,0 +1,65 @@
+.popup-modal-mask {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(9, 17, 41, 0.33);
+    bottom: 0;
+    left: 0;
+    outline: 0;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.popup-modal {
+    border-radius: 12px 12px 50% 50% / 12px 12px 5% 5%;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    overflow: hidden;
+    max-height: 90vh;
+    margin: 32px 16px;
+    box-shadow: rgb(9 17 41 / 25%) 0px 24px 48px 0px;
+    background-clip: padding-box;
+    background-color: #fff;
+    width: 95vw;
+    max-width: 920px;
+}
+
+.popup-modal-content {
+    padding: 8px 40px 24px;
+    margin: 16px 8px 0px;
+    max-height: 63vh;
+}
+
+.popup-modal-content h1 {
+    margin-bottom: 24px;
+}
+
+.popup-modal .description {
+    font-size: 14px;
+}
+
+.popup-modal-content>.description,
+.popup-modal-description {
+    margin-bottom: 40px;
+}
+
+.popup-modal-description {
+    border-radius: 12px;
+    box-shadow: 0 12px 24px 0 rgb(0 0 0 / 5%);
+    margin-top: 20px;
+    padding: 20px; 
+}
+
+.popup-modal-description>p:first-child {
+    font-family: AvenirLTProBlack;
+    font-size: 14px;
+    line-height: 1.29;
+    color: rgb(37, 59, 86);
+    margin: 0px 0px 40px;
+    white-space: pre-line;
+}

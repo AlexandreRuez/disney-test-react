@@ -1,7 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import MainButton from "./MainButton"
+import PopupModal from './PopupModal';
 
 function OptionCard(props) {
+  const [openModal , setopenModal] = useState(false);
+  function closeModal() {
+    setopenModal(false)
+  }
   return (
     <div className="option-card">
         <div className='option-image-container'>
@@ -9,9 +14,12 @@ function OptionCard(props) {
         </div>
         <div className='option-card-content'>
        <h4>{props.option.title}</h4>
-       <p>{props.option.description}</p>
+       <p className='description'>{props.option.description}</p>
        </div>
-       <MainButton style="outline" value="Discover" arrowActive={false}/>
+       <div onClick={(e) => {e.stopPropagation();setopenModal(!openModal);}}>
+          <MainButton style="outline" value="Discover" fullwidth={false} arrowActive={false}/>
+       </div>
+       {openModal && <PopupModal close={() => {closeModal()}} option={props.option}/>}
     </div>
   );
 }

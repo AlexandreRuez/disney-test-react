@@ -1,29 +1,12 @@
 import React from 'react';
 import MainButton from "./MainButton";
 import StarsRanking from "./StarsRanking";
-import { Link } from "react-router-dom";
-
-type Access = { icon: string; value: string; }
-
-type Rating = { value: number; reviews: number; }
-
-type Services = { icon: string; value: string; }
-
-type Hotel = { 
-    id: number; 
-    name: string; 
-    image: string; 
-    ranking: number; 
-    access: Access[]; 
-    rating: Rating; 
-    description: string; 
-    services: Services[]; 
-};
+import SelectHotel from "./SelectHotel"
 
 type HotelCardProps = {
     hotel: Hotel;
     key: number
-  };
+};
 
 class HotelCard extends React.Component<HotelCardProps> {
     renderAccess(access) {
@@ -49,7 +32,10 @@ class HotelCard extends React.Component<HotelCardProps> {
             </div>
         )
     }
+
     render() {
+
+
     return (
         <div className="hotel-card-container">
             <div className="hotel-card">
@@ -60,14 +46,17 @@ class HotelCard extends React.Component<HotelCardProps> {
                     <StarsRanking ranking={this.props.hotel.ranking} />
                     <h3>{this.props.hotel.name}</h3>
                     {this.renderAccess(this.props.hotel.access)}
-                    <p className="desciption">
+                    <p className="description">
                         {this.props.hotel.description}
                     </p>
+                    {this.props.hotel.disclaimer &&
+                        <p className="disclaimer">* Depending on your date of visit, the duration of Extra Magic Time may vary, as may the number of Disney Parks in which it applies. Please check <a href="https://www.disneylandparis.com/en-gb/calendars/park-hours/" title="Calendars parc hours">this page</a> for more information.</p>
+                    }
                     {this.renderServices(this.props.hotel.services)}
                 </div>
             </div>
             <div className='hotel-card-footer'>
-                <Link to="/options"><MainButton value="Check" arrowActive={false} style=""/></Link>
+                <SelectHotel hotel={this.props.hotel}/>
             </div>
         </div>
     )

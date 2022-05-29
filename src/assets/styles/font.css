@@ -1,4 +1,18 @@
 @font-face {
+    font-family: 'AvenirLTProBlack';
+    src: url('../fonts/AvenirLTProBlack.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirLTProHeavy';
+    src: url('../fonts/AvenirLTProHeavy.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'AvenirLTProMedium';
     src: url('../fonts/AvenirLTProMedium.otf');
     font-weight: normal;

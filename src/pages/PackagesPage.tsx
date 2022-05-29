@@ -19,6 +19,7 @@ type Hotel = {
     rating: Rating; 
     description: string; 
     services: Services[]; 
+    disclaimer : boolean;
 };
 
 type PackagesPagesState = {

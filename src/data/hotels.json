@@ -7,26 +7,34 @@
         "access" : [{"icon" : "images/walk.svg", "value" : "A 15 min Walk"}],
         "rating" : {"value" : 2, "reviews": 2058},
         "description" : "A majestic Disney Hotel at the gateway to Disneyland Park, the Disneyland Hotel is currently being renovated to make it more magical than ever. Our Imagineers will be working their magic to make it even more unique and enhance its impeccable 5-star service and unrivalled Disney hospitality.",
-        "services" : [{"icon" : "images/pool.svg", "value" : "Swiming pool"}]
+        "roomDescription" : "VIP - Apartment with 3 rooms, 2 bedrooms: 1 double bed and 2 single beds and 1 sofa bed for 1 adult or 2 children",
+        "services" : [{"icon" : "images/pool.svg", "value" : "Swiming pool"}],
+        "disclaimer" : false,
+        "price" : "500"
+
     },
     {
         "id": 2,
-        "name" : "Disneyland Hotel",
+        "name" : "Disney's Hotel New York - The Art of Marvel",
         "image" : "images/hotel2.jpg",
         "ranking" : 4,
         "access" : [{"icon" : "images/walk.svg", "value" : "A 15 min Walk"}],
         "rating" : {"value" : 2, "reviews": 2058},
-        "description" : "A majestic Disney Hotel at the gateway to Disneyland Park, the Disneyland Hotel is currently being renovated to make it more magical than ever. Our Imagineers will be working their magic to make it even more unique and enhance its impeccable 5-star service and unrivalled Disney hospitality.",
-        "services" : [{"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"},{"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"}]
+        "description" : "Take your stay to new heights at Disney's Hotel New York - The Art of Marvel. Completely reimagined, this swish 4-star hotel exudes contemporary New York style and excellent service while taking the form of a modern art gallery that has assembled Earth's mightiest Marvel artwork. A true Manhattan and Marvel masterpiece",
+        "services" : [{"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"},{"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"}],
+        "disclaimer" : false,
+        "price" : "600"
     },
     {
         "id": 3,
-        "name" : "Disneyland Hotel",
+        "name" : "Disney's Newport Bay Club",
         "image" : "images/hotel3.jpg",
         "ranking" : 2,
         "access" : [{"icon" : "images/walk.svg", "value" : "A 15 min Walk"}],
         "rating" : {"value" : 2, "reviews": 2058},
-        "description" : "A majestic Disney Hotel at the gateway to Disneyland Park, the Disneyland Hotel is currently being renovated to make it more magical than ever. Our Imagineers will be working their magic to make it even more unique and enhance its impeccable 5-star service and unrivalled Disney hospitality.",
-        "services" : [{"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"}]
+        "description" : "Completely renovated as of Spring 2016, this 4-star hotel will immerse you even further into a luxurious coastal experience. \n Enjoy the charm of this 1900s coastal mansion nestled next to Lake Disney. Awash with maritime romance, this Hotel is just a 15 minute walk from the Parks, only a few minutes by free shuttle, and you can even enjoy extra magic in the Disney Parks*.",
+        "services" : [{"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"}],
+        "disclaimer" : true,
+        "price" : "400"
     }
 ]

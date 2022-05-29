@@ -5,13 +5,10 @@
 }
 
 .options-page h1 {
-    width: 100%;
-    font-size: 24px;
-    font-weight: 900;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-image: linear-gradient(89deg,#9d50ae,#672eaf);
+    font-size: 36px;
+    margin: 0;
+    padding-bottom: 4px;
+ 
 }
 
 .options-page h2 {
@@ -43,6 +40,10 @@
     padding-bottom: 16px;
 }
 
+.option-category-header h4 {
+    text-align: left;
+}
+
 .option-category-header p {
     display: block;
     margin: 0px;
@@ -70,7 +71,9 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: space-between;
     width: 292px;
+    min-height: 430px;
     border-radius: 10px;
     box-shadow: rgb(9 17 41 / 5%) 0px 2px 8px 0px;
     overflow: hidden;
@@ -89,6 +92,14 @@
     max-height: inherit;
   }
 
+  .option-card h4 {
+    margin: 16px 0px;
+  }
+
+  .option-card .description {
+    margin: 0px 0px 24px;
+  }
+
   .option-image-container img {
     width: 100%;
     height: 100%;
@@ -99,21 +110,5 @@
     display: flex;
     flex-direction: column;
     padding: 0px 24px;
-  }
-
-  .option-card h4 {
-    font-size: 20px;
-    font-weight: 900;
-    line-height: 1.3;
-    text-align: center;
-    color: rgb(37, 48, 80);
-    margin: 16px 0px;
-  }
-
-  .option-card p {
-    font-size: 12px;
-    line-height: 1.5;
-    color: rgb(37, 48, 80);
-    margin: 0px 0px 24px;
   }
   

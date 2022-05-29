@@ -5,6 +5,7 @@ type MainButtonProps = {
     value: string;
     arrowActive: boolean;
     style: string;
+    fullwidth: boolean;
   };
 
 class MainButton extends React.Component<MainButtonProps> {
@@ -27,7 +28,7 @@ class MainButton extends React.Component<MainButtonProps> {
     }
     render() {
     return (
-        <div className={`main-button ${this.props.style}`}>
+        <div className={`main-button ${this.props.style} ${this.props.fullwidth ? "full-width" : ""}`}>
             <span>{this.props.value}</span>
             {this.renderArrow(this.props.arrowActive)}
         </div>

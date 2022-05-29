@@ -3,6 +3,10 @@
       "preserveConstEnums": true,
       "allowSyntheticDefaultImports": true,
       "jsx": "react",
+      "typeRoots": [
+        "./node_modules/@types/",
+        "src/global.d.ts"
+      ]
     },
     "files": ["src/custom.d.ts"],
     "exclude": ["node_modules", "**/*.spec.ts"]
