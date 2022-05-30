@@ -1,11 +1,11 @@
 import React from 'react';
-import MainButton from "./MainButton";
-import StarsRanking from "./StarsRanking";
+import MainButton from "../MainButton";
+import StarsRanking from "../StarsRanking";
 import SelectHotel from "./SelectHotel"
 
 type HotelCardProps = {
     hotel: Hotel;
-    key: number
+    key: number;
 };
 
 class HotelCard extends React.Component<HotelCardProps> {

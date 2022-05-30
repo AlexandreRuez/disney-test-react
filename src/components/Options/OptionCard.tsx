@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import MainButton from "./MainButton"
+import MainButton from "../MainButton"
 import PopupModal from './PopupModal';
 
 function OptionCard(props) {

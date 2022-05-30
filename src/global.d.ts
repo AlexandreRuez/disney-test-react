@@ -26,7 +26,15 @@ declare global {
         detailedDescription: string;
         image: string;
         price: number;
+        startTime: string;
     }
+
+    interface optionsSelected {
+        id: number, 
+        option: number, 
+        date: string, 
+        startTime: string 
+     }
   }
 
   export {}

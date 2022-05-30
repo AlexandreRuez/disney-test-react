@@ -1,8 +1,8 @@
 import React from 'react';
 import hotelsData from "../data/hotels.json"
 import "../assets/styles/packagesPage.css"
-import SearchSection from "../components/SearchSection"
-import HotelCard from "../components/HotelCard"
+import SearchSection from "../components/Packages/SearchSection"
+import HotelCard from "../components/Packages/HotelCard"
 
 type Access = { icon: string; value: string; }
 

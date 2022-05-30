@@ -1,7 +1,7 @@
 import React from 'react';
 import optionsData from "../data/options.json"
 import "../assets/styles/optionsPage.css"
-import OptionCategorySection from "../components/OptionCategorySection"
+import OptionCategorySection from "../components/Options/OptionCategorySection"
 import SideCart from "../components/SideCart"
 
 type OptionsPageState = {

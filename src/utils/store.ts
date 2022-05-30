@@ -1,10 +1,17 @@
 import { configureStore } from '@reduxjs/toolkit'
-import hotelReducer from './reducers/hotel'
+import orderReducer from './reducers/order'
 
 export const store = configureStore({
   reducer: {
-    hotel: hotelReducer
-  }
+    order: orderReducer
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: ['order/setStartDate', 'order/setEndDate'],
+        ignoredPaths: ['order.dates'],
+      },
+    }),
 })
 
 export type RootState = ReturnType<typeof store.getState>

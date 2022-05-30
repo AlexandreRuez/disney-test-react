@@ -33,6 +33,7 @@
     padding: 8px 40px 24px;
     margin: 16px 8px 0px;
     max-height: 63vh;
+    overflow: auto;
 }
 
 .popup-modal-content h1 {
@@ -62,4 +63,101 @@
     color: rgb(37, 59, 86);
     margin: 0px 0px 40px;
     white-space: pre-line;
+}
+
+.popup-modal-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding: 32px 48px 50px;
+    margin: 0 8px;
+    box-shadow: rgb(0 0 0 / 5%) 0px -12px 24px 0px;
+}
+
+.popup-modal-button-wrapper>div {
+    margin: 4px;
+}
+
+/* Option Selection */
+
+.option-selection {
+    align-items: center;
+    background-color: #f7f7f7;
+    border-radius: 12px;
+    display: flex;
+    margin: 20px 0;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+}
+
+.option-selection .checkbox-input-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.option-selection input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(149, 165, 182);
+    border-radius: 5px;
+    background: transparent;
+    margin-right: 10px;
+}
+
+.option-selection input:checked {
+    background: rgb(0, 70, 228);
+    border: 0px;
+    border: 2px solid #fff;
+}
+
+.option-selection .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .option-selection input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+.option-selection .checkmark {
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    height: 20px;
+    width: 20px;
+}
+
+.option-selection .checkmark::after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.option-selection-infos {
+    display: flex;
+    flex-direction: column;
+}
+
+.option-selection-infos .details{
+    color: #7640a1;
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.option-selection-infos .date{
+    font-family: AvenirLTProBlack;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.option-selection .price {
+    font-size: 18px;
+    margin-left: auto;
 }

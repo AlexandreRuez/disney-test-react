@@ -25,6 +25,10 @@
     transition-duration: .4s;
 }
 
+.search-card-container .error-notification {
+  margin: 12px 32px;
+}
+
 
 .search-card-header {
   justify-content: space-between;
@@ -38,13 +42,28 @@
   margin: 0;
 }
 
+.collapse-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .collapse-btn span {
-  padding: 0px 25px 0px 0px;
-    font-size: 14px;
-    font-weight: 900;
-    white-space: nowrap;
-    text-align: center;
-    color: rgb(0, 70, 228);
+  font-size: 14px;
+  font-weight: 900;
+  white-space: nowrap;
+  text-align: center;
+  color: rgb(0, 70, 228);
+}
+
+.collapse-btn svg {
+  color: rgb(0, 70, 228);
+  transition-duration: .2s;
+  animation-timing-function: ease-out;
+}
+
+.reverse {
+  transform: rotate(-180deg);
 }
 
 .search-card-content {
@@ -77,6 +96,14 @@
   display: flex;
   padding: 0px 32px;
   padding-bottom: 24px;
+}
+
+.dateError .react-date-picker__wrapper {
+  border: thin solid rgb(221, 31, 0);
+}
+
+.dateError label {
+  color: rgb(221, 31, 0);
 }
 
 .searchCollapse {
@@ -304,5 +331,14 @@
     }
     .hotel-card {
       flex-direction: column;
+    }
+
+    .input-dates-wrapper {
+      flex-direction: column;
+      padding: 0px 16px;
+    }
+
+    .calendar-input-wrapper {
+      margin-bottom: 20px;
     }
    }

@@ -12,9 +12,9 @@ import { ReactComponent as BabyIcon } from '../assets/images/babyIcon.svg'
 import { ReactComponent as HotelParkTicketIcon } from '../assets/images/hotelParkTicketIcon.svg'
 
 function SideCart(props) {
-const data = useAppSelector(state => state.hotel);
+const data = useAppSelector(state => state.order);
 const oneDay = 1000 * 60 * 60 * 24;
-const nbNights = Math.round((data.endDate.getTime() - data.startDate.getTime()) / oneDay);
+const nbNights = Math.round((data.dates.end.getTime() - data.dates.start.getTime()) / oneDay);
 const nbDays = nbNights + 1;
 const amount = nbDays * 100 + nbNights * data.hotelSelected.price;
   return (

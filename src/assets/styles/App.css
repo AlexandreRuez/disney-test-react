@@ -102,6 +102,39 @@ p.disclaimer {
   width: 100% !important;
 }
 
+.error-notification {
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid rgb(221, 31, 0);
+  background-color: transparent;
+  margin: 12px auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  min-height: 48px;
+}
+
+.error-notification::before {
+  content: " ";
+  background: rgb(221, 31, 0);
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 6px;
+}
+
+.error-notification p{
+  font-size: 16px !important;
+  padding-left: 10px !important;
+}
+
+.error-notification svg{
+  font-size: 18px;
+  color: rgb(221, 31, 0);
+  margin-left: 11px;
+}
+
 #app-layout {
   display: flex;
   flex-direction: column;

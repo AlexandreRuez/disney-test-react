@@ -5,7 +5,8 @@
         "description" : "Secure your seat for this enchanting musical show in Walt Disney Studios Park and get ready for spellbinding illusions...",
         "detailedDescription" :"Featuring Mickey as the Magician’s apprentice, follow him in this musical show as he learns the ‘tricks’ of his trade from magical Disney Characters such as Genie from Aladdin, Lumière from Beauty and the Beast and Rafiki from The Lion King. Get ready for an enchanting show bursting with spellbinding illusions and special effects that will take your breath away! \n\n Anyone with a valid ticket to Walt Disney Studios Park may access this show, however places are limited. To be sure to see this incredible show, secure your seat* in advance (payable service subject to availability). You'll access via a dedicated line, with no worries! \n\n * With guaranteed access, you can attend the show at the selected time, unless for any reason the show is cancelled, for example due to poor weather conditions. \n\n Please arrive at Animagique Theater in Walt Disney Studios Park at least 30 minutes before the start of the show and be ready to present your guaranteed access* ticket. The theater doors close 5 minutes before the show begins, after which time it will no longer be possible to enter the show. \n\n Same price applies for all guests, adults and children (aged 3-11 years). Free for children under age 3.",
         "image": "images/option1.jpg",
-        "price": 28
+        "price": 28,
+        "startTime" : "12h00"
     },
     {
         "id" : 2,
@@ -13,6 +14,7 @@
         "description" : "Secure your seat for this roaring success of a show, and swing to the rhythm and melodies of the savannah!",
         "detailedDescription" :"Featuring Mickey as the Magician’s apprentice, follow him in this musical show as he learns the ‘tricks’ of his trade from magical Disney Characters such as Genie from Aladdin, Lumière from Beauty and the Beast and Rafiki from The Lion King. Get ready for an enchanting show bursting with spellbinding illusions and special effects that will take your breath away! \n\n Anyone with a valid ticket to Walt Disney Studios Park may access this show, however places are limited. To be sure to see this incredible show, secure your seat* in advance (payable service subject to availability). You'll access via a dedicated line, with no worries! \n\n * With guaranteed access, you can attend the show at the selected time, unless for any reason the show is cancelled, for example due to poor weather conditions. \n\n Please arrive at Animagique Theater in Walt Disney Studios Park at least 30 minutes before the start of the show and be ready to present your guaranteed access* ticket. The theater doors close 5 minutes before the show begins, after which time it will no longer be possible to enter the show. \n\n Same price applies for all guests, adults and children (aged 3-11 years). Free for children under age 3.",
         "image": "images/option2.jpg",
-        "price": 35
+        "price": 35,
+        "startTime" : "15h00"
     }
 ]
