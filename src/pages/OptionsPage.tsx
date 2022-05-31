@@ -21,7 +21,7 @@ class OptionsPage extends React.Component<OptionsPageState> {
                 <h2>Travel to Disneyland Paris hassle-free!</h2>
                 <OptionCategorySection options={this.state.options} />
             </div>
-            <SideCart/>
+            <SideCart route="form"/>
         </div>
         );
     }

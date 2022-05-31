@@ -3,6 +3,7 @@ import type { RootState } from '../store'
 
 // Problème Type Date non-serializable value
 interface OrderState {
+  user: User,
   hotelSelected: Hotel,
   optionsSelected: Array<optionsSelected>,
   dates: {
@@ -13,6 +14,18 @@ interface OrderState {
 }
 
 const initialState: OrderState = {
+  user: {
+    id: 0,
+    mail: "",
+    title: "",
+    firstName: "",
+    lastName: "",
+    adressLine1: "",
+    adressLine2: "",
+    postcode: "",
+    city: "",
+    country: "",
+  },
   hotelSelected: null,
   optionsSelected: [],
   dates: {
@@ -43,12 +56,16 @@ const orderSlice = createSlice({
     },
     setOptions: (state, action: PayloadAction<Array<optionsSelected>>) => {
       state.optionsSelected = action.payload;
+    },
+    setUser: (state, action: PayloadAction<User>) => {
+      state.user = action.payload;
+      console.log(state.user)
     }
 
   }
 })
 
 
-export const { setStartDate, setEndDate, setDateError, unsetDateError, setHotelSelected, setOptions } = orderSlice.actions
+export const { setStartDate, setEndDate, setDateError, unsetDateError, setHotelSelected, setOptions, setUser } = orderSlice.actions
 export const selectHotel = (state: RootState) => state.order
 export default orderSlice.reducer

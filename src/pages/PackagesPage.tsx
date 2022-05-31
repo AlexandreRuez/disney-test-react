@@ -4,28 +4,9 @@ import "../assets/styles/packagesPage.css"
 import SearchSection from "../components/Packages/SearchSection"
 import HotelCard from "../components/Packages/HotelCard"
 
-type Access = { icon: string; value: string; }
-
-type Rating = { value: number; reviews: number; }
-
-type Services = { icon: string; value: string; }
-
-type Hotel = { 
-    id: number; 
-    name: string; 
-    image: string; 
-    ranking: number; 
-    access: Access[]; 
-    rating: Rating; 
-    description: string; 
-    services: Services[]; 
-    disclaimer : boolean;
-};
-
 type PackagesPagesState = {
     hotels?: Hotel[];
 };
-
 
 
 class PackagesPages extends React.Component<PackagesPagesState> {

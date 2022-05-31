@@ -10,7 +10,7 @@
         "roomDescription" : "VIP - Apartment with 3 rooms, 2 bedrooms: 1 double bed and 2 single beds and 1 sofa bed for 1 adult or 2 children",
         "services" : [{"icon" : "images/pool.svg", "value" : "Swiming pool"}],
         "disclaimer" : false,
-        "price" : "500"
+        "price" : 500
 
     },
     {
@@ -21,9 +21,10 @@
         "access" : [{"icon" : "images/walk.svg", "value" : "A 15 min Walk"}],
         "rating" : {"value" : 2, "reviews": 2058},
         "description" : "Take your stay to new heights at Disney's Hotel New York - The Art of Marvel. Completely reimagined, this swish 4-star hotel exudes contemporary New York style and excellent service while taking the form of a modern art gallery that has assembled Earth's mightiest Marvel artwork. A true Manhattan and Marvel masterpiece",
+        "roomDescription" : "VIP - Apartment with 3 rooms, 2 bedrooms: 1 double bed and 2 single beds and 1 sofa bed for 1 adult or 2 children",
         "services" : [{"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"},{"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"}],
         "disclaimer" : false,
-        "price" : "600"
+        "price" : 600
     },
     {
         "id": 3,
@@ -33,8 +34,9 @@
         "access" : [{"icon" : "images/walk.svg", "value" : "A 15 min Walk"}],
         "rating" : {"value" : 2, "reviews": 2058},
         "description" : "Completely renovated as of Spring 2016, this 4-star hotel will immerse you even further into a luxurious coastal experience. \n Enjoy the charm of this 1900s coastal mansion nestled next to Lake Disney. Awash with maritime romance, this Hotel is just a 15 minute walk from the Parks, only a few minutes by free shuttle, and you can even enjoy extra magic in the Disney Parks*.",
+        "roomDescription" : "VIP - Apartment with 3 rooms, 2 bedrooms: 1 double bed and 2 single beds and 1 sofa bed for 1 adult or 2 children",
         "services" : [{"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"}, {"icon" : "images/pool.svg", "value" : "Swiming pool"}],
         "disclaimer" : true,
-        "price" : "400"
+        "price" : 400
     }
 ]

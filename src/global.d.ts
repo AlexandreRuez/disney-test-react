@@ -5,6 +5,20 @@ declare global {
 
     interface Services { icon: string; value: string; }
 
+    interface User { 
+        id: number; 
+        mail: string; 
+        phone: string;
+        title: string;
+        firstName: string; 
+        lastName: string; 
+        adressLine1: string; 
+        adressLine2: string; 
+        postcode: string; 
+        city: string; 
+        country: string;
+    }
+    
     interface Hotel { 
         id: number; 
         name: string; 

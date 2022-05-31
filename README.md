@@ -11,7 +11,6 @@ En cours :
 
 À venir : 
 - Fil d'ariane
-- Page de saisie des informations personnelles
 - Page de Résumé des informations
 - Page de confimation
 - Header 

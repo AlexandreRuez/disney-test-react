@@ -1,0 +1,297 @@
+
+.cart {
+    position: sticky;
+    top: 16px;
+    min-width: 25%;
+  }
+  
+  .cart-title {
+    font-size: 18px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: rgb(38, 54, 86);
+  }
+  
+  .cart-content {
+    background: rgb(255, 255, 255);
+    transition: height 1s ease 0s;
+    max-width: 290px;
+    border-radius: 12px;
+    box-shadow: rgb(0 0 0 / 5%) 0px 12px 24px 0px;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    height: auto;
+    position: relative;
+  }
+  
+  .cart-icon-wrapper {
+    background: #fff;
+    border-radius: 150px;
+    box-shadow: 0 12px 24px 0 rgb(0 0 0 / 12%);
+    position: absolute;
+    right: 20px;
+    top: -5px;
+    z-index: 100;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .cart-info-wrapper {
+    height: auto;
+    max-height: 519px;
+    margin-top: 66px;
+    padding: 0px 20px;
+  }
+  
+  .guest-wrapper {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: transparent;
+    margin-bottom: 15px;
+    font-size: 10px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: rgb(38, 54, 86);
+    position: relative;
+    z-index: 5;
+    width: 90%;
+    margin-left: 19px;
+  }
+  
+  .guest-infos {
+    display: flex;
+    align-items: center;
+    width: 33.33%;
+    justify-content: center;
+    margin: 0px -9px;
+  }
+  
+  .guest-infos span {
+    font-size: 14px;
+    color: rgb(37, 48, 80);
+  }
+  
+  .hotel-park-ticket-icon {
+    color: #8a9bae;
+    margin-bottom: 6px;
+    align-items: center;
+    display: flex;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hotel-park-ticket-icon>svg{
+    margin-right: 10px;
+    height: 32px;
+    width: 32px;
+    min-width: 32px;
+  }
+  
+  .hotel-park-ticket-icon h3{
+    color: #8a9bae;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .2px;
+    margin: 2px 0 0 -5px;
+    text-transform: uppercase;
+  }
+
+.cart-info-wrapper button {
+    font-family: inherit;
+    z-index: 0;
+    position: relative;
+    cursor: pointer;
+    border-width: 0px;
+    font-weight: 700;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 4px;
+    max-width: calc(100% - 8px);
+    overflow: hidden;
+    box-shadow: none;
+    text-align: center;
+    touch-action: manipulation;
+    outline: none;
+    vertical-align: middle;
+    background: none;
+    border-radius: 24px;
+    font-size: 16px;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 8px;
+    text-decoration: none !important;
+    transition: none 0s ease 0s !important;
+    color: rgb(0, 70, 228) !important;
+  }
+  
+  .cart-info-wrapper button svg{
+    margin: 0;
+  }
+  
+  .cart-hotel-info {
+    background-color: rgb(247, 247, 247);
+    border-radius: 12px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .cart-hotel-info .ranking-container {
+    height: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .cart-hotel-details {
+    display: flex;
+    margin: 5px 0px
+  }
+  
+  .cart-hotel-details>.description{
+    font-weight: 900;
+    color: rgb(138, 155, 174);
+    flex: 1 1 0%;
+  }
+  
+  .cart-hotel-details .night-ticket-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  
+  .cart-hotel-details .night,
+  .cart-hotel-details .ticket  {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-hotel-details .ticket>div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cart-hotel-details .ticket p {
+    margin: 0;
+    line-height: 12px;
+  }
+  
+  .cart-hotel-details .parks {
+    display: flex;
+      margin: 0px;
+      font-size: 12px;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 12px;
+      letter-spacing: normal;
+      color: rgb(37, 59, 86);
+      -webkit-box-align: stretch;
+      align-items: stretch;
+  }
+  
+  .cart-hotel-details svg{
+    width: 40px;
+    height: 40px;
+  }
+  
+  .cart-hotel-details .night-ticket-wrapper .description {
+    font-weight: 900;
+    color: rgb(37, 59, 86);
+  }
+  
+  .cart-hotel-details .night-ticket-wrapper .description .number {
+    font-size: 16px;
+    margin-right: 5px;
+  }
+  
+  .cart-hotel-details svg path{
+    fill: rgb(118, 64, 161);
+  }
+  
+  .cart-hotel-amount {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .hotel-amount-title {
+    font-size: 12px;
+    margin: 0px;
+    color: rgb(37, 48, 80);
+    font-weight: 900;
+    line-height: 1.17;
+  }
+  
+  .taxes-infos{
+    font-size: 10px;
+    font-weight: 500;
+    text-align: right;
+    color: rgb(138, 155, 174);
+    margin: 0px;
+  }
+  
+  .colored-disclaimer {
+    font-size: 10px;
+    font-weight: 900;
+    text-align: right;
+    color: rgb(105, 53, 142);
+    margin: 5px 0px 0px;
+  }
+  
+  .cart-total-amount,
+  .total-amount-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .cart-total-amount {
+    margin-right: 20px;
+    margin-top: 15px;
+  }
+  
+  .total-amount-wrapper {
+    background: linear-gradient(0deg, rgb(241, 146, 215), rgb(180, 90, 209)) right top / 4px 90% no-repeat transparent;
+    padding-right: 16px;
+  }
+  
+  .total-amount-wrapper .price {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  
+  .total-amount-wrapper-title {
+    color: rgb(78, 99, 121);
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+  }
+  
+  .cart-total-amount .taxes-infos {
+    padding-right: 16px;
+  }
+  
+  .cart-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 30px 10px 10px 10px;
+  }
+  
+  .cart-button-wrapper a {
+    width: 100%;
+  }
+  
+    
+  @media (max-width: 1025px) { 
+    .cart {
+        
+    }
+   }

@@ -6,7 +6,7 @@ type StarsRankingProps = {
   };
 
 function StarsRanking(props: StarsRankingProps) {
-    const stars = [];
+    var stars = [];
     for (var i = 0; i < props.ranking; i++) {
         stars.push(<i key={i}><img src={star} alt="star icon"></img></i>);
     }

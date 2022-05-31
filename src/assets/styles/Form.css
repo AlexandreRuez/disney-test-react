@@ -1,0 +1,77 @@
+.form-page {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.form-page h4 {
+    text-align: left;
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+.form-section{
+    width: 75%;
+    padding-right: 24px;
+}
+
+.form-container {
+    margin-top: 20px;
+    margin-bottom: 24px;
+    padding: 24px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 10%) 0px 3px 10px 0px;
+    border-radius: 12px;
+}
+
+.form-line {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    margin-right: 24px;
+}
+
+label {
+    font-size: 12px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    color: rgb(37, 48, 80);
+    margin-left: 6px;
+    margin-bottom: 6px;
+}
+
+input, select {
+    font-family: inherit;
+    border-radius: 4px;
+    border: 1px solid rgb(138, 155, 174);
+    background-color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    box-shadow: none;
+    padding: 12px;
+    min-height: 40px;
+    width: 100%;
+}
+
+input:focus, select:focus {
+    border-color: rgb(0, 51, 204);
+    outline: none;
+    box-shadow: none;
+}
+
+label.focused {
+    color: rgb(0, 70, 238);
+}

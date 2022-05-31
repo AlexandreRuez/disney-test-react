@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import MainButton from "./MainButton"
 import DatesSelected from "./DatesSelected"
 import StarsRanking from "./StarsRanking"
+import "../assets/styles/cart.css"
 import { useAppSelector } from "../utils/hooks"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid, regular } from '@fortawesome/fontawesome-svg-core/import.macro'
@@ -85,7 +87,9 @@ const amount = nbDays * 100 + nbNights * data.hotelSelected.price;
                     <p className='taxes-infos'>Taxes & fees included</p>
                 </div>
                 <div className='cart-button-wrapper'>
-                    <MainButton outlineStyle={false} value="Next" arrowActive={true} fullwidth={true}/>
+                    <Link to={`/${props.route}`}>
+                        <MainButton outlineStyle={false} value="Next" arrowActive={true} fullwidth={true}/>
+                    </Link>
                 </div>
             </div>
         </div>
