@@ -17,7 +17,7 @@ function OptionCard(props) {
        <p className='description'>{props.option.description}</p>
        </div>
        <div onClick={(e) => {e.stopPropagation();setopenModal(!openModal);}}>
-          <MainButton style="outline" value="Discover" fullwidth={false} arrowActive={false}/>
+          <MainButton outlineStyle={true} value="Discover" fullwidth={false} arrowActive={false}/>
        </div>
        {openModal && <PopupModal close={() => {closeModal()}} option={props.option}/>}
     </div>

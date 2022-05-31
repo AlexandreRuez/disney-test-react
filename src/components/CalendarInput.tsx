@@ -5,7 +5,7 @@ import 'react-calendar/dist/Calendar.css';
 
 function CalendarInput(props) {
   const [inputDate, setInputDate] = useState(props.data);
-  const [isActive , setActive] = useState(false);
+  const [isActive, setActive] = useState(false);
   return (
     <div>
       <div className={`calendar-input-wrapper  ${props.dateError ? "dateError": ""} ${isActive ? "calendarActive": ""}`}>

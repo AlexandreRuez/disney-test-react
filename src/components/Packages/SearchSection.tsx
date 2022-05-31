@@ -6,12 +6,17 @@ import { useAppDispatch, useAppSelector } from "../../utils/hooks"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 
+// Bloquer la saisie des dates antérieures à dates.start pour la saisie de dates.end et inversement
 // Gestion des erreurs de dates à terminer
 
 function SearchSection() {
     const [isActive , setActive] = useState(false);
+    
+    // Gestion des erreurs sur les dates à terminer
     const [startDateError , setstartDateError] = useState(false);
     const [endDateError , setendDateError] = useState(false);
+    // -----------------------------------------------------------
+
     const dispatch = useAppDispatch();
     const data = useAppSelector(state => state.order);
 
@@ -37,7 +42,7 @@ function SearchSection() {
                     <CalendarInput dateError={endDateError} label="Departure date" data={data.dates.end} updateDate={(date) => updateDate("end", date)}/>
                 </div>
                 <p>Enjoy an even more comfortable stay by adding a second room to your search! <br></br>
-                Booking for more than 12 people? Booking more than 2 rooms? Please <a href='#'>contact us.</a></p>
+                Booking for more than 12 people? Booking more than 2 rooms? Please <a href='https://www.disneylandparis.com/en-gb/my-disneyland/contact-us/'>contact us.</a></p>
                 {data.dates.error && <ErrorNotification/>} 
             </div>
             

@@ -1,5 +1,4 @@
 import React from 'react';
-import MainButton from "../MainButton";
 import StarsRanking from "../StarsRanking";
 import SelectHotel from "./SelectHotel"
 

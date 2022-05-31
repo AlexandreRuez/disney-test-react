@@ -4,7 +4,7 @@ import DatesSelected from "./DatesSelected"
 import StarsRanking from "./StarsRanking"
 import { useAppSelector } from "../utils/hooks"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { solid, regular } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
+import { solid, regular } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { ReactComponent as CartIcon } from '../assets/images/cartIcon.svg'
 import { ReactComponent as AdultIcon } from '../assets/images/adultIcon.svg'
 import { ReactComponent as ChildIcon } from '../assets/images/childIcon.svg'
@@ -85,7 +85,7 @@ const amount = nbDays * 100 + nbNights * data.hotelSelected.price;
                     <p className='taxes-infos'>Taxes & fees included</p>
                 </div>
                 <div className='cart-button-wrapper'>
-                    <MainButton style="" value="Next" arrowActive={true} fullwidth={true}/>
+                    <MainButton outlineStyle={false} value="Next" arrowActive={true} fullwidth={true}/>
                 </div>
             </div>
         </div>

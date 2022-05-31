@@ -34,13 +34,13 @@ function PopupModal(props) {
     const nbDays = Math.round((data.dates.end.getTime() - data.dates.start.getTime()) / oneDay)  + 1;
     const options = [];
     var dateInfo = new Date(data.dates.start);
-    for (var i = 0; i < nbDays; i++) {
+    for (let i: number = 0; i < nbDays; i++) {
 
         options.push(
           <OptionSelection 
             id={i} 
             key={i} 
-            checked={optionsSelected.findIndex(value => value.id === i) != -1 ? true : false} date={dateInfo.toLocaleDateString("fr-FR", { weekday: 'long', day: '2-digit', month:'long', year: 'numeric' })}
+            checked={optionsSelected.findIndex(value => value.id === i) !== -1 ? true : false} date={dateInfo.toLocaleDateString("fr-FR", { weekday: 'long', day: '2-digit', month:'long', year: 'numeric' })}
             option={props.option} 
             selectOption={(event,option)=>selectOption(event, option)}
           />
@@ -71,10 +71,10 @@ function PopupModal(props) {
             <div className='popup-modal-button-wrapper'>
               {/* setOptionsSelected quand on appuie sur le bouton retour pour réinitialiser la selection */}
               <div onClick={() => {props.close(); setOptionsSelected(data.optionsSelected)}}>
-                <MainButton style="outline" value="Close" fullwidth={false} arrowActive={false} />
+                <MainButton outlineStyle={true} value="Close" fullwidth={false} arrowActive={false} />
               </div>
               <div onClick={() => updateOptions()}>
-                <MainButton style="" value="Select"  fullwidth={false} arrowActive={false} />
+                <MainButton outlineStyle={false} value="Select"  fullwidth={false} arrowActive={false} />
               </div>
             </div>
         </div>

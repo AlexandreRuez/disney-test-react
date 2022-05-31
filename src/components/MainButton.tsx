@@ -4,7 +4,7 @@ import { ReactComponent as ArrowIcon } from '../assets/images/arrow.svg'
 type MainButtonProps = {
     value: string;
     arrowActive: boolean;
-    style: string;
+    outlineStyle: boolean;
     fullwidth: boolean;
   };
 
@@ -28,7 +28,7 @@ class MainButton extends React.Component<MainButtonProps> {
     }
     render() {
     return (
-        <div className={`main-button ${this.props.style} ${this.props.fullwidth ? "full-width" : ""}`}>
+        <div className={`main-button ${this.props.outlineStyle ? "outline" : ""} ${this.props.fullwidth ? "full-width" : ""}`}>
             <span>{this.props.value}</span>
             {this.renderArrow(this.props.arrowActive)}
         </div>
