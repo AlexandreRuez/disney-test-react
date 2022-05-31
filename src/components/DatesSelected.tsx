@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { regular } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { useAppSelector } from "../utils/hooks"
@@ -32,9 +33,11 @@ function DatesSelected(props) {
         </div>
         
     </div>
-    <div className='edit-wrapper'>
-    <FontAwesomeIcon className='edit-icon' icon={regular('pen-to-square')} />
-    </div>
+    <Link to="/">
+        <div className='edit-wrapper'>
+            <FontAwesomeIcon className='edit-icon' icon={regular('pen-to-square')} />
+        </div>
+    </Link>
     </div>
   );
 }

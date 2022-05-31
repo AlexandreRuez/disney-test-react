@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from "react-router-dom";
 import MainButton from "./MainButton"
 import DatesSelected from "./DatesSelected"
@@ -14,6 +14,7 @@ import { ReactComponent as BabyIcon } from '../assets/images/babyIcon.svg'
 import { ReactComponent as HotelParkTicketIcon } from '../assets/images/hotelParkTicketIcon.svg'
 
 function SideCart(props) {
+const [isActive, setActive] = useState(false);
 const data = useAppSelector(state => state.order);
 const oneDay = 1000 * 60 * 60 * 24;
 const nbNights = Math.round((data.dates.end.getTime() - data.dates.start.getTime()) / oneDay);
@@ -26,7 +27,10 @@ const amount = nbDays * 100 + nbNights * data.hotelSelected.price;
                 <div className='cart-icon-wrapper'>
                     <CartIcon/>
                 </div>
-                <div className='cart-info-wrapper'>
+                <div className='mobile-bar-wrapper' onClick={() => {setActive(!isActive)}}>
+                    <div className='mobile-bar'></div>
+                </div>
+                <div className={`cart-info-wrapper ${isActive ? "" : "hide"}`}>
                     <DatesSelected/>
                     <div className='guest-wrapper'>
                        <div className='guest-infos'><AdultIcon/><span>x 2</span></div>
@@ -36,12 +40,16 @@ const amount = nbDays * 100 + nbNights * data.hotelSelected.price;
                     <div className='hotel-park-ticket-icon'>
                         <HotelParkTicketIcon/>
                         <h3>Hotel + parks tickets</h3>
-                        <button>
-                            <FontAwesomeIcon className='edit-icon' icon={regular('pen-to-square')} />
-                        </button>
-                        <button>
-                            <FontAwesomeIcon className='edit-icon' icon={regular('trash-can')} />
-                        </button>
+                        <Link to="/">
+                            <button>
+                                <FontAwesomeIcon className='edit-icon' icon={regular('pen-to-square')} />
+                            </button>
+                        </Link>
+                        <Link to="/">
+                            <button>
+                                <FontAwesomeIcon className='edit-icon' icon={regular('trash-can')} />
+                            </button>
+                        </Link>
                     </div>
                     <div className='cart-hotel-info'>
                         <StarsRanking ranking={3}/>
@@ -60,7 +68,7 @@ const amount = nbDays * 100 + nbNights * data.hotelSelected.price;
                                 </div>
                                 <div className='separator'></div>
                                 <div className='ticket'>
-                                    <span> <FontAwesomeIcon className='edit-icon' icon={solid('ticket')} /></span>
+                                        <span> <FontAwesomeIcon className='edit-icon' icon={solid('ticket')} /></span>
                                     <div>
                                         <p className='description'><span className='number'>{nbDays}</span> days</p> 
                                         <p className='parks'><span>2 parks</span></p>
@@ -79,7 +87,7 @@ const amount = nbDays * 100 + nbNights * data.hotelSelected.price;
                         </div>
                     </div>
                 </div>
-                <div className='cart-total-amount'>
+                <div className='cart-total-amount' onClick={() => {setActive(true)}}>
                     <div className='total-amount-wrapper'>
                         <span className='total-amount-wrapper-title'>Total amount</span>
                         <span className='price'>£{amount}</span>

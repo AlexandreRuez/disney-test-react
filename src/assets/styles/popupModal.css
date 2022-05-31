@@ -94,6 +94,12 @@
     cursor: pointer;
 }
 
+.option-selection label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .option-selection input{
     appearance: none;
     width: 20px;
@@ -107,7 +113,7 @@
 .option-selection input:checked {
     background: rgb(0, 70, 228);
     border: 0px;
-    border: 2px solid #fff;
+    border: 2px solid rgb(0, 70, 228);
 }
 
 .option-selection .checkmark:after {
@@ -160,4 +166,12 @@
 .option-selection .price {
     font-size: 18px;
     margin-left: auto;
+    white-space: nowrap;
+}
+
+
+@media (max-width: 500px) { 
+    .popup-modal-button-wrapper {
+        justify-content: center;
+    }
 }

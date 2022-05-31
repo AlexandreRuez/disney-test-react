@@ -6,7 +6,6 @@
 
 En cours :
 
-- Panier responsive pour mobile 
 - Afficher le total des option selectionnées sur les OptionCard
 
 À venir : 

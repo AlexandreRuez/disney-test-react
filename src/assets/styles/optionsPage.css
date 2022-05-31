@@ -111,4 +111,24 @@
     flex-direction: column;
     padding: 0px 24px;
   }
+
+  @media (max-width: 1025px) { 
+    .options-section {
+        padding: 0px;
+        margin-bottom: 170px;
+    }
+  }
+
+  @media (max-width: 670px) { 
+    .cards-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+  @media (max-width: 500px) { 
+    .option-card {
+        margin-right: 0;
+    }
+  }
   
