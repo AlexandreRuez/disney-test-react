@@ -1,5 +1,7 @@
 # Infos
 
+## Démo disponible sur ce [lien](http://146.59.153.148:3000/)
+
 ## Reste à faire
 
 En cours :
