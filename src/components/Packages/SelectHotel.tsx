@@ -16,6 +16,7 @@ function OptionCard(props) {
     function selectHotel(hotel) {
         if(data.dates.start != null && data.dates.end != null) {
           dispatch(orderActions.setHotelSelected(hotel))
+          dispatch(orderActions.unlockOptionGuard())
           navigate("/options");
         }
         else {

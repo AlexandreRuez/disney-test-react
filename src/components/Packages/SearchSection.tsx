@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import CalendarInput from '../CalendarInput'
 import ErrorNotification from '../ErrorNotification'
 import * as orderActions from "../../utils/reducers/order";
@@ -6,23 +6,25 @@ import { useAppDispatch, useAppSelector } from "../../utils/hooks"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 
-// Bloquer la saisie des dates antérieures à dates.start pour la saisie de dates.end et inversement
-// Gestion des erreurs de dates à terminer
-
 function SearchSection() {
     const [isActive , setActive] = useState(false);
-    
-    // Gestion des erreurs sur les dates à terminer
-    const [startDateError , setstartDateError] = useState(false);
-    const [endDateError , setendDateError] = useState(false);
-    // -----------------------------------------------------------
+    const [startDateLimit , setStartDateLimit] = useState(new Date());
+    const [endDateLimit , setEndDateLimit] = useState();
 
     const dispatch = useAppDispatch();
     const data = useAppSelector(state => state.order);
 
+    useEffect(() => {
+        if (data.dates.start != null && data.dates.end != null) {
+            if (data.dates.start>data.dates.end ) {
+                dispatch(orderActions.setEndDate(null)) 
+            }
+            dispatch(orderActions.unsetDateError())
+        }
+    }, [data.dates]);
+
     function updateDate(type,date) {
-        dispatch(orderActions.unsetDateError())
-        type === "start" ? dispatch(orderActions.setStartDate(date)) : dispatch(orderActions.setEndDate(date))
+        type === "start" ? dispatch(orderActions.setStartDate(date)) &&  setEndDateLimit(date) : dispatch(orderActions.setEndDate(date))
     }
 
     return (
@@ -36,14 +38,14 @@ function SearchSection() {
                     <FontAwesomeIcon className={`edit-icon ${isActive && 'reverse'}` } icon={solid('chevron-down')} />
                 </div>
             </div>
-            <div className={`search-card-content ${!isActive && "searchCollapse"}`}>
+            <div className={`search-card-content ${!isActive && !data.dates.error ? "searchCollapse" : ""}`}>
                 <div className="input-dates-wrapper">
-                    <CalendarInput dateError={startDateError} label="Arrival date" data={data.dates.start} updateDate={(date) => updateDate("start", date)}/>
-                    <CalendarInput dateError={endDateError} label="Departure date" data={data.dates.end} updateDate={(date) => updateDate("end", date)}/>
+                    <CalendarInput startDateLimit={startDateLimit} dateError={data.dates.error} label="Arrival date" data={data.dates.start} updateDate={(date) => updateDate("start", date)}/>
+                    <CalendarInput startDateLimit={endDateLimit} dateError={data.dates.error} label="Departure date" data={data.dates.end} updateDate={(date) => updateDate("end", date)}/>
                 </div>
                 <p>Enjoy an even more comfortable stay by adding a second room to your search! <br></br>
                 Booking for more than 12 people? Booking more than 2 rooms? Please <a href='https://www.disneylandparis.com/en-gb/my-disneyland/contact-us/'>contact us.</a></p>
-                {data.dates.error && <ErrorNotification/>} 
+                {data.dates.error ? <ErrorNotification/> : ""} 
             </div>
             
         </div>
