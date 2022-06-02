@@ -20,6 +20,7 @@ function SearchSection() {
                 dispatch(orderActions.setEndDate(null)) 
             }
             dispatch(orderActions.unsetDateError())
+            dispatch(orderActions.unlockOptionGuard())
         }
     }, [data.dates]);
 

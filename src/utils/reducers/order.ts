@@ -13,7 +13,9 @@ interface OrderState {
   },
   guards: {
     options: boolean,
-    form: boolean
+    form: boolean,
+    review: boolean,
+    confirm:boolean
   }
 }
 
@@ -39,8 +41,10 @@ const initialState: OrderState = {
     error: false
   },
   guards : {
-    options: true,
-    form: false
+    options: false,
+    form: false,
+    review: false,
+    confirm: false
   }
 }
 
@@ -66,6 +70,12 @@ const orderSlice = createSlice({
     unlockFormGuard: (state) => {
       state.guards.form = true;
     },
+    unlockReviewGuard: (state) => {
+      state.guards.review = true;
+    },
+    unlockConfirmGuard: (state) => {
+      state.guards.confirm = true;
+    },
     setHotelSelected: (state, action: PayloadAction<Hotel>) => {
       state.hotelSelected = action.payload;
     },
@@ -74,13 +84,12 @@ const orderSlice = createSlice({
     },
     setUser: (state, action: PayloadAction<User>) => {
       state.user = action.payload;
-      console.log(state.user)
     }
 
   }
 })
 
 
-export const { setStartDate, setEndDate, setDateError, unsetDateError, setHotelSelected, setOptions, setUser,unlockOptionGuard ,unlockFormGuard } = orderSlice.actions
+export const { setStartDate, setEndDate, setDateError, unsetDateError, setHotelSelected, setOptions, setUser,unlockOptionGuard ,unlockFormGuard, unlockReviewGuard, unlockConfirmGuard } = orderSlice.actions
 export const selectHotel = (state: RootState) => state.order
 export default orderSlice.reducer

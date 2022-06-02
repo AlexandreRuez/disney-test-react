@@ -4,7 +4,7 @@ function OptionSelection(props) {
   return (
     <div className="option-selection">
         <label className='checkbox-input-container'>
-            <input type="checkbox" checked={props.checked} className="checkbox-input" value="" onChange={(event) => props.selectOption(event,{ id: props.id, option: props.option.id, date: props.date, startTime: props.option.startTime })}/>
+            <input type="checkbox" checked={props.checked} className="checkbox-input" value="" onChange={(event) => props.selectOption(event,{ idEvent: props.idEvent, idOption: props.option.id, date: props.date, startTime: props.option.startTime, price: props.option.price })}/>
             <span className="checkmark"></span>
         </label>
         <div className="option-selection-infos">

@@ -25,7 +25,7 @@ function OptionCard(props) {
     }
   return (
     <div onClick={clickHandler(props.hotel)}>
-      <MainButton value="Check" arrowActive={false} fullwidth={false} outlineStyle={false}/>
+      <MainButton value="Check" arrowActive={false} fullwidth={false} outlineStyle={false} icon={false}/>
     </div>
   );
 }

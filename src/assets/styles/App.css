@@ -2,7 +2,44 @@
 body {
   background-color: #f7f7f7;
   font: 14px/1.5 AvenirLTProMedium;
+  overflow-x: hidden;
 }
+
+header {
+  height: 100px;
+  position: fixed;
+  top: 0;
+  padding: 5px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: #FFF;
+  border-bottom: 1px solid #e1e1e1;
+  z-index: 10;
+}
+
+footer {
+  position: sticky;
+  bottom: -100px;
+  height: 100px;
+  padding: 5px 20px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFF;
+  border-bottom: 1px solid #e1e1e1;
+  margin-top: 100px;
+}
+
+footer svg {
+  height: 100%;
+}
+
+footer p {
+  font-size: 24px;
+}
+
 
 h1.colored {
   width: 100%;
@@ -41,6 +78,14 @@ h4 {
   text-align: center;
   color: rgb(37, 48, 80);
   margin: 16px 0px;
+}
+
+h5 {
+  font-family: AvenirLTProBlack;
+  font-size: 18px;
+  line-height: 1.33;
+  text-align: left;
+  color: rgb(9, 17, 41);
 }
 
 h6 {
@@ -141,6 +186,7 @@ p.disclaimer {
   align-items: center;
   margin: 0 auto;
   width: 93%;
+  padding-top: 120px;
 }
 
 .main-button {
@@ -161,6 +207,10 @@ p.disclaimer {
   background: #FFF;
   color: rgb(0, 70, 228);
   border: 2px solid rgb(0, 70, 228);
+}
+
+.main-button .svg-inline--fa {
+  margin-left: 5px;
 }
 
 .button-arrow {

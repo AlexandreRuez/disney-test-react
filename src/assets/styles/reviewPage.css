@@ -1,0 +1,138 @@
+.review-page {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.review-page .cart {
+    top: 195px;
+    height: 100%;
+}
+
+
+.main-text-icon {
+    display: flex;
+    align-items: center;
+}
+
+.main-text-icon svg {
+    color: rgb(180, 82, 163);
+    margin-right: 10px;
+}
+
+.text-icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 15px;
+}
+
+.text-icon>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-icon svg {
+    color: rgb(180, 82, 163);
+    margin-right: 10px;
+    position: absolute;
+    top: 1px;
+    left: -25px;
+}
+
+.text-icon h5 {
+    font-family: AvenirLTProBlack;
+    font-size: 14px;
+    text-align: left;
+    color: rgb(9, 17, 41);
+    margin: 0px;
+}
+
+.banner {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 288px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: ellipse(100% 70% at 50% 30%);
+}
+
+.review-section{
+    width: 75%;
+    padding-top: 288px;
+    padding-right: 24px;
+}
+
+.review-container {
+    margin-top: 20px;
+    margin-bottom: 24px;
+    padding: 24px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 10%) 0px 3px 10px 0px;
+    border-radius: 12px;
+}
+
+.review-hotel-wrapper {
+    padding: 0px 32px;
+}
+
+.hotel-image-box {
+    max-width: 368px;
+    height: 196px;
+    position: relative;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 10px 0px;
+    border: 8px solid rgb(255, 255, 255);
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.hotel-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hotel-infos-header {
+    display: flex;
+}
+
+.hotel-infos-header h3 {
+    font-family: AvenirLTProBlack;
+    font-size: 20px;
+    line-height: 1.22;
+    text-align: left;
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
+    color: rgb(37, 59, 86);
+    margin: 0px;
+}
+
+.hotel-description {
+    font-size: 14px;
+    line-height: 1.43;
+    text-align: left;
+    padding: 0px 80px 0px 0px;
+    margin: 0px;
+    font-weight: 900;
+    color: rgb(138, 155, 174);
+    margin-top: 15px;
+}
+
+.guest-uppercase {
+    text-transform: uppercase;
+}
+
+
+@media (max-width: 1025px) { 
+    .review-section {
+        width: 100%;
+        padding-right: 0;
+    }
+  }

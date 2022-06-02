@@ -76,6 +76,15 @@ label.focused {
     color: rgb(0, 70, 238);
 }
 
+.error label,
+.error p{
+    color: rgb(221, 31, 0);
+}
+
+.error input {
+    border: 1px solid rgb(221, 31, 0);
+}
+
 @media (max-width: 1024px) { 
     .form-section {
         width: 100%;

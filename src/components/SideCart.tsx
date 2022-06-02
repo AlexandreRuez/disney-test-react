@@ -40,16 +40,6 @@ const amount = nbDays * 100 + nbNights * data.hotelSelected.price;
                     <div className='hotel-park-ticket-icon'>
                         <HotelParkTicketIcon/>
                         <h3>Hotel + parks tickets</h3>
-                        <Link to="/">
-                            <button>
-                                <FontAwesomeIcon className='edit-icon' icon={regular('pen-to-square')} />
-                            </button>
-                        </Link>
-                        <Link to="/">
-                            <button>
-                                <FontAwesomeIcon className='edit-icon' icon={regular('trash-can')} />
-                            </button>
-                        </Link>
                     </div>
                     <div className='cart-hotel-info'>
                         <StarsRanking ranking={3}/>
@@ -94,10 +84,8 @@ const amount = nbDays * 100 + nbNights * data.hotelSelected.price;
                     </div>
                     <p className='taxes-infos'>Taxes & fees included</p>
                 </div>
-                <div className='cart-button-wrapper'>
-                    <Link to={`/${props.route}`}>
-                        <MainButton outlineStyle={false} value="Next" arrowActive={true} fullwidth={true}/>
-                    </Link>
+                <div className='cart-button-wrapper' onClick={() => props.navigateFunction()}>
+                        <MainButton outlineStyle={false} value={props.btnValue} arrowActive={props.btnArrowActive} fullwidth={true} icon={false}/>
                 </div>
             </div>
         </div>

@@ -1,26 +1,20 @@
 # Infos
 
-## Démo disponible sur ce [lien](http://146.59.153.148:3000/)
+## Démo disponible via ce [lien](http://146.59.153.148:3000/)
 
 ## Reste à faire
 
-En cours :
-
-- Afficher le total des option selectionnées sur les OptionCard
-
-À venir : 
+Éléments manquants: 
+- Calendrier de sélection des dates à styliser
 - Fil d'ariane
-- Page de Résumé des informations
+- Page de Résumé des informations à terminer
 - Page de confimation
-- Header 
-- Footer
 
 Améliorations possibles :
-- Gestion des dates
 - Ajout de la sélection du nombre personnes et de chambres
 - Personnaliser le calendrier de sélection
 - Annimations Css
-- Retour sur la page de départ si un lien est saisi sans avoir suivi toutes les étapes du parcours ( ex: saisie directe de l'url : localhost:3000/options )
+- Hover sur les boutons
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

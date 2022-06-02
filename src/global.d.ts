@@ -34,7 +34,7 @@ declare global {
     }
 
     interface Option { 
-        id: number; 
+        id: string; 
         title: string;
         description: string; 
         detailedDescription: string;
@@ -44,10 +44,11 @@ declare global {
     }
 
     interface optionsSelected {
-        id: number, 
-        option: number, 
+        idEvent: string,
+        idOption: string, 
         date: string, 
-        startTime: string 
+        startTime: string,
+        price: number
      }
   }
 

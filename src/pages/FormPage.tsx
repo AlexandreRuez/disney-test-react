@@ -5,11 +5,14 @@ import FormInput from "../components/Form/FormInput"
 import * as orderActions from "../utils/reducers/order";
 import { useAppDispatch, useAppSelector } from "../utils/hooks"
 import FormSelect from '../components/Form/FormSelect';
+import { useNavigate } from "react-router-dom";
 
 function FormPage (props) {
     const data = useAppSelector(state => state.order);
     const [user, setUser] = useState<User>(data.user);
+    const [mailError, setMailError] = useState<boolean>(false);
     const dispatch = useAppDispatch();
+    let navigate = useNavigate();
     const titleOptions = ["","LADY","LORD","MISS","MR","MRS","MS","MASTER"];
     const countryOptions = ["","FRANCE","AUSTRALIA","INDIA","ITALIA","MEXICO","PORTUGAL","UNITED STATES"];
 
@@ -19,7 +22,20 @@ function FormPage (props) {
         dispatch(orderActions.setUser(Object.assign(tmpUser,userInputValue)));
     }
 
-    // ici je pense que je pourrais supprimer la prop "targetValue" et utiliser la référence de la prop "inputValue" dans le onChange de l'input pour modifier l'objet user dans la fonction updateUser()
+    function navigateTo() {
+        if(data.user.mail != "" ) {
+            dispatch(orderActions.unlockReviewGuard());
+            navigate('/review');
+        }
+        else {
+            setMailError(true);
+        }
+    }
+
+    // Améliorations possibles :
+    // Supprimer la prop "targetValue" et utiliser la référence de la prop "inputValue" dans le onChange de l'input pour modifier l'objet user dans la fonction updateUser()
+    // Intégrer la vérification des champs obligatoires dans le component FormInput
+    // Vérifier le format de l'adresse mail avec une RegEx
 
     return  (
     <div className='form-page'>
@@ -29,7 +45,7 @@ function FormPage (props) {
             <div className='form-container'>
                 <h4>Guests Information</h4>
                 <div className='form-line'>
-                    <FormInput label="Email*" targetValue="mail" inputValue={user.mail} maxLength={null} updateUser={(userInputValue) => {updateUser(userInputValue)}} fullwidth={false}/>
+                    <FormInput label="Email*" targetValue="mail" inputValue={user.mail} maxLength={null} updateUser={(userInputValue) => {updateUser(userInputValue)}} fullwidth={false} error={mailError}/>
                 </div>
                 <div className='form-line'>
                     <FormInput label="Phone (30 characters max.)" maxLength={30} targetValue="phone" inputValue={user.phone} updateUser={(userInputValue) => {updateUser(userInputValue)}} fullwidth={false}/>
@@ -50,7 +66,7 @@ function FormPage (props) {
                 </div>
             </div>
         </div>
-        <SideCart/>
+        <SideCart navigateFunction={() => navigateTo()} btnValue="Next" btnArrowActive={true}/>
     </div>
     );
   }

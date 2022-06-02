@@ -3,6 +3,7 @@
     position: sticky;
     top: 16px;
     min-width: 25%;
+    z-index: 9;
   }
   
   .cart-title {

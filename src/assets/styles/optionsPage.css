@@ -112,6 +112,25 @@
     padding: 0px 24px;
   }
 
+  .total-options-price-text {
+    font-family: AvenirLTProBlack;
+    margin: 0px 0px 4px;
+    font-size: 12px;
+    line-height: normal;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .total-options-price  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .total-options-price .main-button {
+    margin-top: 10px;
+  }
+
   @media (max-width: 1025px) { 
     .options-section {
         padding: 0px;

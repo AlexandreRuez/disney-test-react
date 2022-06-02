@@ -18,7 +18,7 @@ function PopupModal(props) {
     }
     else {
       const tmpOptionsSelected = [...optionsSelected];
-      tmpOptionsSelected.splice(optionsSelected.findIndex(value => value.id === option.id),1)
+      tmpOptionsSelected.splice(optionsSelected.findIndex(value => value.idEvent === option.idEvent),1)
       setOptionsSelected(tmpOptionsSelected);
     }
   }
@@ -38,9 +38,9 @@ function PopupModal(props) {
 
         options.push(
           <OptionSelection 
-            id={i} 
-            key={i} 
-            checked={optionsSelected.findIndex(value => value.id === i) !== -1 ? true : false} date={dateInfo.toLocaleDateString("fr-FR", { weekday: 'long', day: '2-digit', month:'long', year: 'numeric' })}
+            idEvent={"opt" + props.option.id + i}
+            key={"opt" + props.option.id + i} 
+            checked={optionsSelected.findIndex(value => value.idEvent === "opt" + props.option.id + i) !== -1 ? true : false} date={dateInfo.toLocaleDateString("fr-FR", { weekday: 'long', day: '2-digit', month:'long', year: 'numeric' })}
             option={props.option} 
             selectOption={(event,option)=>selectOption(event, option)}
           />
@@ -71,10 +71,10 @@ function PopupModal(props) {
             <div className='popup-modal-button-wrapper'>
               {/* setOptionsSelected quand on appuie sur le bouton retour pour réinitialiser la selection */}
               <div onClick={() => {props.close(); setOptionsSelected(data.optionsSelected)}}>
-                <MainButton outlineStyle={true} value="Close" fullwidth={false} arrowActive={false} />
+                <MainButton outlineStyle={true} value="Close" fullwidth={false} arrowActive={false} icon={false}/>
               </div>
               <div onClick={() => updateOptions()}>
-                <MainButton outlineStyle={false} value="Select"  fullwidth={false} arrowActive={false} />
+                <MainButton outlineStyle={false} value="Select"  fullwidth={false} arrowActive={false} icon={false}/>
               </div>
             </div>
         </div>

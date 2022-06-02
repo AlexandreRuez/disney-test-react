@@ -1,19 +1,22 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import optionsData from "../data/options.json"
 import "../assets/styles/optionsPage.css"
 import OptionCategorySection from "../components/Options/OptionCategorySection"
 import SideCart from "../components/SideCart"
 import * as orderActions from "../utils/reducers/order";
 import { useAppDispatch } from "../utils/hooks"
+import { useNavigate } from "react-router-dom";
 
 
 function OptionsPage (props) {
     const options:Array<Option> = optionsData;
     const dispatch = useAppDispatch();
-    useEffect(() => {
-        dispatch(orderActions.unlockFormGuard());
-    }, []); 
+    let navigate = useNavigate();
     
+    function navigateTo() {
+        dispatch(orderActions.unlockFormGuard());
+        navigate('/form');
+    }
     return  (
     <div className='options-page'>
         <div className="options-section">
@@ -22,7 +25,7 @@ function OptionsPage (props) {
             <h2>Travel to Disneyland Paris hassle-free!</h2>
             <OptionCategorySection options={options} />
         </div>
-        <SideCart route="form"/>
+        <SideCart navigateFunction={() => navigateTo()}  btnValue="Next" btnArrowActive={true}/>
     </div>
     );
   }
