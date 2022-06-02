@@ -8,7 +8,7 @@
 - Calendrier de sélection des dates à styliser
 - Fil d'ariane
 - Page de Résumé des informations à terminer
-- Page de confimation
+- Page de confirmation
 
 Améliorations possibles :
 - Ajout de la sélection du nombre personnes et de chambres
