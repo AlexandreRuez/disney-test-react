@@ -9,6 +9,7 @@
 - Fil d'ariane
 - Page de Résumé des informations à terminer
 - Page de confirmation
+- - Le montant total ne prend pas en compte les options sélectionnées
 
 Améliorations possibles :
 - Ajout de la sélection du nombre personnes et de chambres
